@@ -26,18 +26,30 @@
 - 스택과 큐
 
 
+---
+
+
 ## Design pattern (디자인 패턴)
+
+
+---
 
 
 ## Algorithm (알고리즘)
 
 
+
+---
+
 ## Operating system (운영체제)
+
+
+---
 
 
 ## Computer network (컴퓨터 네트워크)
 
 
-
+---
 
 
