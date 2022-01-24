@@ -12,8 +12,9 @@
 -나중에 작성하기
 
 ## Data structure (자료구조)
-- [정렬 및 탐색]
-- [class 배열]
+- 정렬 및 탐색
+- class 배열
+- 스택과 큐
 
 
 ## Design pattern (디자인 패턴)
