@@ -7,4 +7,6 @@
 - quick sort (퀵정렬)
 - [binary search (이진 탐색)](https://github.com/euichanhwang/CS_study/blob/main/data-structure/%EC%A0%95%EB%A0%AC%20%EB%B0%8F%20%ED%83%90%EC%83%89/BinarySearch.cpp)
 
+---
+
 ## class 배열
