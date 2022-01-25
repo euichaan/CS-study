@@ -17,10 +17,9 @@ int main(void)
             }
         }
     }
-    for(int i=0;i<10;i++)
-    {
-        printf("%d ",array[i]);
-    }
+    for(auto& e:array)
+      std::cout << e << " ";
+    std::cout<<std::endl;
 
 
     return 0;
