@@ -22,7 +22,7 @@ temp=list[i];
         list[index]=temp; // 두 원소의 위치를 바꾼다
 ```    
 **💡선택 정렬의 시간 복잡도 : N(N+1)/2 => O(N^2)**   
-### [bubble sort (버블 정렬)]
+### [bubble sort (버블 정렬)](https://github.com/euichanhwang/CS_study/blob/main/data-structure/%EC%A0%95%EB%A0%AC%20%EB%B0%8F%20%ED%83%90%EC%83%89/BubbleSort.cpp)
 **옆에 있는 값과 비교해서 더 작은 값을 앞으로 보내는 정렬방법**  
 `1 10 5 8 7 6 4 3 2 9` 라는 정렬되지 않은 정수에서 먼저 1과 10을 비교해서 더 작은 것을 앞으로 옮긴다.  
 이미 1이 앞에 있으므로 그 다음 10과 5를 비교해서 더 작은 5를 앞으로 보내면 `1 5 10 8 7 6 4 3 2 9`이다.  
