@@ -20,11 +20,33 @@
 temp=list[i];
         list[i]=list[index];
         list[index]=temp; // 두 원소의 위치를 바꾼다
-```
-- bubble sort (버블 정렬)
-- insertion sort (삽입 정렬)
-- quick sort (퀵정렬)
-- [binary search (이진 탐색)](https://github.com/euichanhwang/CS_study/blob/main/data-structure/%EC%A0%95%EB%A0%AC%20%EB%B0%8F%20%ED%83%90%EC%83%89/BinarySearch.cpp)
+```  
+**선택 정렬의 시간 복잡도 : N*(N+1)/2 => O(N^2)**    
+### [bubble sort (버블 정렬)]
+**옆에 있는 값과 비교해서 더 작은 값을 앞으로 보내는 정렬방법**
+`1 10 5 8 7 6 4 3 2 9` 라는 정렬되지 않은 정수에서 먼저 1과 10을 비교해서 더 작은 것을 앞으로 옮긴다.  
+이미 1이 앞에 있으므로 그 다음 10과 5를 비교해서 더 작은 5를 앞으로 보내면 `1 5 10 8 7 6 4 3 2 9`이다.  
+다음으로 10과 8을 비교해서 더 작은것을 앞으로 옮기면 `1 5 8 10 7 6 4 3 2 9` 이다. 그 다음으로 7과 10을  
+비교해서 더 작은 7을 앞으로 옮기면 `1 5 8 7 10 6 4 3 2 9`이다. 이런식으로 한번의 반복이 끝났을때 리스트는  
+`1 5 8 7 6 4 3 2 9 10` 인데, 가장 큰 값이 맨 뒤로 보내지는 방식이다. 10을 제외하고 1부터 9까지 앞의 방법  
+을 이용해서 반복하면, 수행했을 때 결과는 가장 큰값이었던 9가 맨 뒤로 보내진 리스트를 얻게 된다. 끝까지 반복  
+하면  `1 2 3 4 5 6 7 8 9 10` 이라는 정렬된 정수 리스트를 얻을 수 있다.  
+```c++
+for(j=0;j<9-i;j++) //뒤에서부터 집합의 크기 하나씩 감소
+        {
+            if(array[j]>array[j+1])
+            {
+                temp=array[j];
+                array[j]=array[j+1];
+                array[j+1]=temp;
+            }
+        }
+```  
+**버블 정렬의 시간 복잡도 : O(N^2)** 시간 복잡도는 선택 정렬과 동일하나 실제 수행 시간으로는 선택 정렬보다 훨씬  
+느리다. 매번 교체를 해줘야 하는 점에서 실제로 더욱 비효율적이다.
+### [insertion sort (삽입 정렬)]
+### [quick sort (퀵정렬)]
+### [binary search (이진 탐색)](https://github.com/euichanhwang/CS_study/blob/main/data-structure/%EC%A0%95%EB%A0%AC%20%EB%B0%8F%20%ED%83%90%EC%83%89/BinarySearch.cpp)
 
 ---
 
