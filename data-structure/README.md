@@ -120,4 +120,6 @@ while(array[j]>array[j+1])
 
 
 
+---
+
 ## class 배열
