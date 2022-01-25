@@ -18,7 +18,7 @@
 
 ## Object-Oriented Programming (객체지향 프로그래밍)
 
-### [💿구현 코드 및 설명](./object-oriented-programming)
+### [💿구현 코드 및 설명](https://github.com/euichanhwang/CS_study/tree/main/object-oriented%20programming)
  
 #### 공부할 내용
 
