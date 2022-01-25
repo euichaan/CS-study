@@ -80,7 +80,28 @@ while(array[j]>array[j+1])
 3보다 작은 리스트에서는 1을 기준값으로 해서, `(1) 2` 3보다 큰 리스트에서는 8을 기준값으로 해서 `(8) 5 9 6 10 7 4`  
 또 정렬을 수행한다. 이런식으로 퀵 정렬을 반복하면, `1 2 3 4 5 6 7 8 9 10` 이라는 정렬된 리스트를 얻을 수 있다.  
 ```c++
-
+ while(i<=j) //엇갈릴 때 까지 반복 . 왼쪽 값과 pivot 값을 바꾼다
+    {
+        while(i<=end && data[i]<=data[key]) //키 값보다 큰 값을 만날때까지
+        {
+            i++;
+        }
+        while(data[j]>=data[key] && j>start) //키 값보다 작은 값을 만날때까지 
+        {
+            j--; 
+        }
+        if(i>j) //엇갈린 상태면 키값과 교체
+        {
+            temp=data[j];
+            data[j]=data[key];
+            data[key]=temp;
+        }
+        else{ //엇갈리지 않았다면 두개의 값 교체
+            temp=data[j];
+            data[j]=data[i];
+            data[i]=temp;
+        }
+    }
 
 ```  
 **💡퀵 정렬의 시간 복잡도 : O(N×logN)**  
