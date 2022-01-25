@@ -1,6 +1,6 @@
 #include<iostream>
 //Data Structure
-//Bubble sort 구현 
+//quick sort 구현 
 int main(void)
 {
 
