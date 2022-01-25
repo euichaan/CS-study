@@ -19,8 +19,10 @@ int main(void)
              if(j<0)
                 break;
          }
-
      }
+    for(auto& e:array)
+      std::cout << e << " ";
+    std::cout<<std::endl;
 
 
     return 0;
