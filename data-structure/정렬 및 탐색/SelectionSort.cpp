@@ -1,21 +1,24 @@
 #include<iostream>
+#include<limits.h>
 //Data Structure
 //selection sort 구현 
 void SelectionSort(int *list,const int n)
 {
-    int temp,least;
-    for(int i=0;i<n-1;i++)
+    int i,j,min,index,temp;
+    for(int i=0;i<n;i++)
     {
-        least=i;
-        for(int j=i+1;j<n;j++)
+        min=INT32_MAX;
+        for(int j=i;j<n;j++)
         {
-            if(list[j]<list[least])
-                least=j; 
+            if(min>list[j])
+            {
+                min=list[j];
+                index=j;
+            }
         }
         temp=list[i];
-        list[i]=list[least];
-        list[least]=temp;
-
+        list[i]=list[index];
+        list[index]=temp;
     }
 
 }
