@@ -5,7 +5,7 @@
 로 구분되며, 선형 자료구조는 데이터가 일렬로 나열되어 있고 비선형 자료구조는 데이터가 특정한 형태를 띄고 있다.   
 선형 자료구조의 종류에는 **array, linked list, stack, queue** 등이 있으며 비선형 자료구조로는 **tree, graph** 등이 있다.  
 자료구조의 분류
-![자료구조의 분류](./img/자료구조의 분류.png)  
+![자료구조의 분류](https://github.com/euichanhwang/CS_study/blob/main/img/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%9D%98%20%EB%B6%84%EB%A5%98.png)  
 
 ## 기본 개념
 - [정렬 및 탐색](https://github.com/euichanhwang/CS_study/tree/main/data-structure/%EC%A0%95%EB%A0%AC%20%EB%B0%8F%20%ED%83%90%EC%83%89)
