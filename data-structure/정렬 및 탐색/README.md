@@ -160,7 +160,7 @@ while(array[j]>array[j+1])
 이 필요하다는 점에서 메모리 활용이 비효율적이라는 문제가 있다.
 
 ### std::sort 함수 사용하기  
-stl 라이브러리 중 하나인 sort 함수를 이용해서 정렬하는 방법. 
+**stl 라이브러리에 포함된 sort 함수를 이용해서 정렬하는 방법.** 
 ```c++
 int a[10]={9,3,5,4,1,10,8,6,7,2};
     sort(a,a+10); //10은 개수의 의미에 가깝다. 원소가 10개 있다고 보면 된다.
@@ -172,11 +172,27 @@ bool compare(int a,int b)
     return a>b; //내림차순 정렬
 }
 sort(a,a+10,compare);
+```
+클래스를 이용한 객체의 멤버 변수를 정렬할 때도 사용 가능하다.
+```c++
+class Student
+{
+public:
+    string name;
+    int score;
+    Student(string name,int score)
+    {
+        this->name=name;
+        this->score=score;
+    }
+    //정렬 기준은 '점수가 적은 순서'
+    bool operator < (Student &student)
+    {
+        return this->score <student.score;
+    }
+
+};
 ```  
-
-
-
-
 
 ### [binary search (이진 탐색)](https://github.com/euichanhwang/CS_study/blob/main/data-structure/%EC%A0%95%EB%A0%AC%20%EB%B0%8F%20%ED%83%90%EC%83%89/BinarySearch.cpp)
 
