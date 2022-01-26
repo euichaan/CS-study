@@ -35,7 +35,7 @@ void merge(int a[],int m,int middle,int n)
     }
     else
     {
-        for(int t=i;t<=n;t++)
+        for(int t=i;t<=middle;t++)
         {
             sorted[k]=a[t];
             k++;
