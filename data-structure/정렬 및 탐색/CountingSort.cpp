@@ -4,7 +4,7 @@
 using namespace std;
 int main(void)
 {
-    int temp;
+    
     int count[5];
     int arr[30]={
         1,3,2,4,3,2,5,3,1,2,
