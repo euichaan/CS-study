@@ -1,3 +1,4 @@
+## 정렬 및 탐색
 ### [selection sort (선택 정렬)](https://github.com/euichanhwang/CS_study/blob/main/data-structure/%EC%A0%95%EB%A0%AC%20%EB%B0%8F%20%ED%83%90%EC%83%89/SelectionSort.cpp)  
 **정렬되지 않은 정수들 중에서 가장 작은 값을 찾아서 정렬된 리스트 다음 자리에 놓는 정렬방법.**  
 `1 10 5 8 7 6 4 3 2 9` 라는 정렬되지 않은 정수에서 가장 작은 값을 찾으면 1이다. 가장 앞으로 보낸다.  
