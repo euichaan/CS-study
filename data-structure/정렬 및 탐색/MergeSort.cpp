@@ -62,7 +62,7 @@ int main(void)
 {
     const int number=8;
     int arr[number]={7,6,5,8,3,5,9,1};
-    mergeSort(arr,0,number);
+    mergeSort(arr,0,number-1);
     for(int i=0;i<number;i++)
     {
         cout << arr[i] <<" ";
