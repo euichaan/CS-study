@@ -9,7 +9,7 @@ void merge(int a[],int m,int middle,int n)
     int j=middle+1;
     int k=m;
     // 작은 순서대로 배열에 삽입
-    while(i<=middle &j<=n)
+    while(i<=middle && j<=n)
     {
         if(a[i]<=a[j])
         {
