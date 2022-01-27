@@ -175,20 +175,47 @@ while(array[j]>array[j+1])
 힙 생성 알고리즘은, 전체 트리에 대해서 heapify를 반복적으로 수행하면 전체 노드가 다 힙 구조가 된다. 힙 생성 알고리즘의 시간 복잡도는  
 한 번 자식 노드로 내려갈 때마다 노드의 개수가 2배로 증가한다는 점에서 O(log<sub>2</sub>N)이다.
 ![힙 정렬 진행과정](https://github.com/euichanhwang/CS_study/blob/main/img/%ED%9E%99%20%EA%B5%AC%EC%A1%B0%EC%9D%98%20%EC%A7%84%ED%96%89%EA%B3%BC%EC%A0%95.jpg)  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```c++
+// 전체 트리 구조를 최대 힙 구조로 만든다.
+    for(int i=1;i<number;i++)
+    {
+        int c=i;
+        do{
+            int root=(c-1)/2; //자기 자신의 부모를 의미
+            if(heap[root]<heap[c])
+            {
+                int temp=heap[root];
+                heap[root]=heap[c];
+                heap[c]=temp;
+            }
+            c=root;
+        }while(c!=0);
+    }
+    //크기 줄이면서 반복적으로 힙 구성
+    for(int i=number-1;i>=0;i--)
+    {
+        int temp=heap[0]; //0번째 인덱스가 제일 큰 값
+        heap[0]=heap[i];
+        heap[i]=temp;
+        int root=0;
+        int c=1;
+        do{
+            c=2*root+1;
+            //자식 중에 더 큰값을 찾기
+            if(heap[c]<heap[c+1]&&c<i-1)
+            {
+                c++;
+            }
+            //루트보다 자식이 더 크다면 교환
+            if(heap[root]<heap[c]&&c<i)
+            {
+                int temp=heap[root];
+                heap[root]=heap[c];
+                heap[c]=temp;
+            }
+            root=c;
+        }while(c<i);
+```  
 **💡힙 정렬의 시간 복잡도 : N×log<sub>2</sub>N**  
 한 번 자식 노드로 내려갈 때마다 노드의 개수가 2배씩 증가한다는 점에서 log<sub>2</sub>N이다.여기에 정점의 수 N을 곱해준다.    
 ### [counting sort (계수 정렬)](https://github.com/euichanhwang/CS_study/blob/main/data-structure/%EC%A0%95%EB%A0%AC%20%EB%B0%8F%20%ED%83%90%EC%83%89/CountingSort.cpp)  
