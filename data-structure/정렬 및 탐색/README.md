@@ -171,7 +171,7 @@ while(array[j]>array[j+1])
 힙 정렬을 수행하기 위해서, **힙 생성 알고리즘**(heapify algorithm)을 사용하는데, 어떠한 노드에 대해서 최대 힙이 붕괴되었을  
 시 부모 노드와 부모 노드보다 더 큰 자식 노드를 교체한다. 위치를 바꾼 후에도 자식이 존재 하는 경우 또 자식 중에서 더 큰 자식  
 과 부모 노드의 위치를 바꾼다. 한번 힙 생성 알고리즘이 수행되는 시간은 트리의 높이와 같다. 
-![힙 구조와 힙 생성 알고리즘](https://github.com/euichanhwang/CS_study/blob/main/img/%ED%9E%99%20%EA%B5%AC%EC%A1%B0%EC%99%80%20%ED%9E%99%20%EC%83%9D%EC%84%B1%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98.jpg)  
+![힙 구조와 힙 생성 알고리즘](https://github.com/euichanhwang/CS_study/blob/main/img/%ED%9E%99%20%EA%B5%AC%EC%A1%B0%EC%99%80%20%ED%9E%99%20%EC%83%9D%EC%84%B1%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98.jpg)
 
 
 
