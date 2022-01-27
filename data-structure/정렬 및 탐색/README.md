@@ -173,8 +173,8 @@ while(array[j]>array[j+1])
 과 부모 노드의 위치를 바꾼다. 한번 힙 생성 알고리즘이 수행되는 시간은 트리의 높이와 같다. 
 ![힙 구조와 힙 생성 알고리즘](https://github.com/euichanhwang/CS_study/blob/main/img/%ED%9E%99%20%EA%B5%AC%EC%A1%B0%EC%99%80%20%ED%9E%99%20%EC%83%9D%EC%84%B1%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98.jpg)  
 힙 생성 알고리즘은, 전체 트리에 대해서 heapify를 반복적으로 수행하면 전체 노드가 다 힙 구조가 된다. 힙 생성 알고리즘의 시간 복잡도는  
-한 번 자식 노드로 내려갈 때마다 노드의 개수가 2배로 증가한다는 점에서 **O(log<sub>2</sub>N)**이다.
-![힙 정렬 진행과정](https://github.com/euichanhwang/CS_study/blob/main/img/%ED%9E%99%20%EA%B5%AC%EC%A1%B0%EC%9D%98%20%EC%A7%84%ED%96%89%EA%B3%BC%EC%A0%95.jpg)    
+한 번 자식 노드로 내려갈 때마다 노드의 개수가 2배로 증가한다는 점에서 O(log<sub>2</sub>N)이다.
+![힙 정렬 진행과정](https://github.com/euichanhwang/CS_study/blob/main/img/%ED%9E%99%20%EA%B5%AC%EC%A1%B0%EC%9D%98%20%EC%A7%84%ED%96%89%EA%B3%BC%EC%A0%95.jpg)  
 
 
 
