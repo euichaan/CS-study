@@ -16,7 +16,7 @@
 
 ---  
 ## 기본 자료구조
-- 스택과 큐
+- [스택과 큐](https://github.com/euichanhwang/CS_study/tree/main/data-structure/%EC%8A%A4%ED%83%9D%EA%B3%BC%20%ED%81%90)
 
 
 
