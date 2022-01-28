@@ -34,6 +34,8 @@ h파일(헤더),cpp파일(구현부)를 나누어서 구현한다.
 헤더에서 정의한 함수를 구현하고, 더하기 연산자 오버로딩과 출력 연산자 오버로딩을 구현한다.  
 아래 그림과 같이, **다항식을 배열 자료구조에 넣어 표현할 수 있다.**  
 ![다항식을 class 배열로 표현](https://github.com/euichanhwang/CS_study/blob/main/img/%EB%8B%A4%ED%95%AD%EC%8B%9D%EC%9D%84%20class%20%EB%B0%B0%EC%97%B4%EC%9C%BC%EB%A1%9C%20%ED%91%9C%ED%98%84.jpg)  
+🎁**실행결과**  
+![다항식 덧셈 실행결과](https://github.com/euichanhwang/CS_study/blob/main/img/%EB%8B%A4%ED%95%AD%EC%8B%9D%20%EB%8D%A7%EC%85%88%20%EC%8B%A4%ED%96%89%EA%B2%B0%EA%B3%BC.png)  
 
 
 
