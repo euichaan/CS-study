@@ -27,7 +27,7 @@ public:
 ### 배열을 이용한 다항식의 덧셈 구현  
 h파일(헤더),cpp파일(구현부)를 나누어서 구현한다.  
 - [lab_poly.cpp](https://github.com/euichanhwang/CS_study/blob/main/data-structure/class%20%EB%B0%B0%EC%97%B4/lab_poly.cpp)  
-항의 개수를 입력받은 후, 다항식 class에 저장한다. 그 후, 다항식끼리 덧셈 연산을 수행한 후 결과를 반환한다.  
+항의 개수를 입력받은 후, 다항식 class의 객체에 저장한다. 그 후, 다항식끼리 덧셈 연산을 수행한 후 결과를 반환한다.  
 - [poly.h](https://github.com/euichanhwang/CS_study/blob/main/data-structure/class%20%EB%B0%B0%EC%97%B4/poly.h)  
 헤더 파일에는 함수 원형과 동적 배열 선언을 구현한다.  
 - [poly.cpp](https://github.com/euichanhwang/CS_study/blob/main/data-structure/class%20%EB%B0%B0%EC%97%B4/poly.cpp)
