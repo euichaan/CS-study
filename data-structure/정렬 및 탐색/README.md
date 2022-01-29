@@ -291,14 +291,18 @@ public:
 ### [binary search (이진 탐색)](https://github.com/euichanhwang/CS_study/blob/main/data-structure/%EC%A0%95%EB%A0%AC%20%EB%B0%8F%20%ED%83%90%EC%83%89/BinarySearch.cpp)  
 **오름차순으로 정렬된 정수의 리스트를 같은 크기의 두 부분 리스트로 나누고 필요한 부분에서만**    
 **탐색하도록 제한하여 원하는 원소를 찾는 알고리즘.**  
-1.middle(중간값)을 (left+right)/2로 선언한다.    
-2.a[middle]과 key값을 비교해서 세 가지 경우 중 하나를 고려한다.
-    - key<a[middle] : 이 경우 key가 존재한다면
-    - key=a[middle] : 이 경우에는 middle을 반환한다.
-    -
+- middle(중간값)을 (left+right)/2로 선언한다. left=0, right=n-1 이다.(각각 리스트의 왼쪽,오른쪽 끝 지점)      
+- a[middle]과 key값을 비교해서 세 가지 경우 중 하나를 고려한다.
+    1. key<a[middle] : 이 경우 key가 존재한다면 그것은 0과 middle 사이에 있으므로 right를 middle-1로 설정한다.  
+    2. key=a[middle] : 이 경우에는 middle을 반환한다.  
+    3. key>a[middle] : 이 경우 key가 존재한다면 middle+1과 n-1 사이에 있으므로 left를 middle+1로 설정한다.  
+x가 발견되지 않고 검사할 정수가 남아 있다면 middle을 다시 계산하고 탐색을 계속한다.  
+```c++
+
+    
 
 
 
 
-
+```  
 ---
