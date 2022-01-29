@@ -299,11 +299,19 @@ public:
 
 **x가 발견되지 않고 검사할 정수가 남아 있다면 middle을 다시 계산하고 탐색을 계속한다.**  
 ```c++
-
-    
-
-
-
-
+int BinarySearch(int *list, const int key, const int n)
+{
+  int left = 0;
+  int right = n - 1;
+  while (left <= right)  //원소가 더 있는 한
+  {
+    int middle = (left + right) / 2;
+    if (key < list[middle])
+      right = middle - 1;
+    else if (key > list[middle]) left=middle+1;
+      else return middle;
+  }
+  return -1; // not found
+}
 ```  
 ---
