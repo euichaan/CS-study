@@ -288,7 +288,11 @@ public:
 };
 ```  
 
-### [binary search (이진 탐색)](https://github.com/euichanhwang/CS_study/blob/main/data-structure/%EC%A0%95%EB%A0%AC%20%EB%B0%8F%20%ED%83%90%EC%83%89/BinarySearch.cpp)
+### [binary search (이진 탐색)](https://github.com/euichanhwang/CS_study/blob/main/data-structure/%EC%A0%95%EB%A0%AC%20%EB%B0%8F%20%ED%83%90%EC%83%89/BinarySearch.cpp)  
+**오름차순으로 정렬된 정수의 리스트를 같은 크기의 두 부분 리스트로 나누고 필요한 부분에서만**    
+**탐색하도록 제한하여 원하는 원소를 찾는 알고리즘.**
+1.middle(중간값)을 (left+right)/2로 선언한다
+2.a[middle]과 key값을 비교해서, 
 
 
 
