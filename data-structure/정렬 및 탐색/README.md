@@ -295,8 +295,9 @@ public:
 - a[middle]과 key값을 비교해서 세 가지 경우 중 하나를 고려한다.
     1. key<a[middle] : 이 경우 key가 존재한다면 그것은 0과 middle 사이에 있으므로 right를 middle-1로 설정한다.  
     2. key=a[middle] : 이 경우에는 middle을 반환한다.  
-    3. key>a[middle] : 이 경우 key가 존재한다면 middle+1과 n-1 사이에 있으므로 left를 middle+1로 설정한다.  
-x가 발견되지 않고 검사할 정수가 남아 있다면 middle을 다시 계산하고 탐색을 계속한다.  
+    3. key>a[middle] : 이 경우 key가 존재한다면 middle+1과 n-1 사이에 있으므로 left를 middle+1로 설정한다.
+
+**x가 발견되지 않고 검사할 정수가 남아 있다면 middle을 다시 계산하고 탐색을 계속한다.**  
 ```c++
 
     
