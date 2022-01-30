@@ -88,7 +88,14 @@ void Stack<T>::Pop()
 ![원형 큐의 삽입과 삭제](https://github.com/euichanhwang/CS_study/blob/main/img/%EC%9B%90%ED%98%95%20%ED%81%90%EC%9D%98%20%EC%82%BD%EC%9E%85%EA%B3%BC%20%EC%82%AD%EC%A0%9C.png)  
 - **front가 가리키는 것을 항상 비어있게 한다. front+1의 값으로 첫 원소를 가져온다.**  
 - rear 변수는 큐에서 마지막 원소의 위치를 가리킨다. 
-- rear가 꽉 찼을 때 나머지 연산자를 이용해서 맨 앞으로 돌아올 수 있게(0번 인덱스로)한다. //if(rear) 
+- rear가 꽉 찼을 때 나머지 연산자를 이용해서 맨 앞으로 돌아올 수 있게(0번 인덱스로)한다.  
+💡원형 큐를 동작시키기 위해서는 front와 rear을 현 위치에서부터 다음 위치(시계방향)로 이동시킬 수 있어야 한다. 
+```c++ 
+if(rear==capacity-1) rear=0; // 맨 앞은 항상 비어있게 하므로 capacity-1로 한다.  
+else rear++;   
+```  
+나머지 연산자를 활용해서 위의 코드를 **rear=(rear+1)%capacity** 로 바꿀 수 있다.  
+
 
 
 
