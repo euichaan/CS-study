@@ -74,6 +74,19 @@ void Stack<T>::Pop()
     stack[top--].~T();
 }
 ```  
+### 큐(queue)
+**한쪽 끝(rear)에서 삽입이 일어나고 그 반대쪽 끝(front)에서 삭제가 일어나는 순서 리스트**  
+- 새로운 원소가 삽입되는 끝-리어(rear)  
+- 원소가 삭제되는 끝-프런트(front)  
+- **선입선출(FIFO,First-In-First-Out)리스트  
+![큐의 구조](https://github.com/euichanhwang/CS_study/blob/main/img/queue%EC%9D%98%20%EA%B5%AC%EC%A1%B0.png)  
+### 큐의 구현 : 선형 큐의 문제점을 보완한 원형 큐(index를 이동할 수 있게 한다.) 
+- 선형 큐의 문제점: rear가 가르키는 포인터가 배열의 마지막 인덱스를 가르키고 있을 때 앞쪽에서 pop으로 발생한 빈 공간을 활용할 수 없다.  
+- rear에 push했을 때 앞의 배열이 비어있다면, 제일 앞으로 갈 수 있게한다.  
+- 큐가 배열의 끝에서 되돌아오게 하여 최악의 경우 삽입,삭제 시간을 O(1)으로 한다.  
+![원형 큐의 삽입과 삭제](https://github.com/euichanhwang/CS_study/blob/main/img/%EC%9B%90%ED%98%95%20%ED%81%90%EC%9D%98%20%EC%82%BD%EC%9E%85%EA%B3%BC%20%EC%82%AD%EC%A0%9C.png)  
+
+
 
 
 
