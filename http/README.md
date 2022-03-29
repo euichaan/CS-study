@@ -1,5 +1,5 @@
 # http 및 웹 기반 지식 
-
+**HTTP 프로토콜에 대한 핵심 기능과 HTTP API에 대한 설계 및 웹 기반 지식을 학습한다.**
 ## 기본 개념
 - [Internet network](https://github.com/euichanhwang/CS_study/tree/main/http/internet%20network)   
 - [uri-webbrowser](https://github.com/euichanhwang/CS_study/tree/main/http/uri-webbrowser)   
