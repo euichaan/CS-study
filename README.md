@@ -74,7 +74,7 @@
  
 #### 공부할 내용
 
-- 인터넷 네트워크 
+- Internet Network
 - uri-webbrowser
 - http
 - http-method
