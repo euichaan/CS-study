@@ -70,6 +70,17 @@
 
 ## HTTP (http)
 
+### [💿구현 코드 및 설명](./data-structure)
+ 
+#### 공부할 내용
+
+- 인터넷 네트워크 
+- uri-webbrowser
+- http
+- http-method
+- http-method-use
+- http-status
+- http-header
 
 ---
 
