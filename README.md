@@ -9,7 +9,7 @@
 - [Algorithm (알고리즘)](#algorithm-알고리즘)
 - [operating system (운영체제)](#operating-system-운영체제)
 - [Computer network (컴퓨터 네트워크)](#computer-network-컴퓨터-네트워크)
-- [HTTP 및 웹 기반 지식](#http)
+- [HTTP 및 웹 기반 지식](#HTTP-http)
 
 
 ## 목표
