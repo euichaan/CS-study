@@ -70,7 +70,7 @@
 
 ## HTTP (http)
 
-### [💿구현 코드 및 설명](./data-structure)
+### [💿구현 코드 및 설명](https://github.com/euichanhwang/CS_study/tree/main/http)
  
 #### 공부할 내용
 
