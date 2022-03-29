@@ -26,10 +26,13 @@ Host: www.google.com
 - GET은 쿼리 파라미터를 사용해서 데이터를 전달  
 
 3. HTML Form을 통한 데이터 전송
-- 주로 회원 가입, 상품 주문, 데이터 변경 등에 사용
-- POST 전송으로 저장
+- 주로 회원 가입, 상품 주문, 데이터 변경 등에 사용  
+- POST 전송으로 저장  
+- Content-Type: application/x-www-form-urlencoded 사용   
+- form의 내용을 메시지 바디를 통해 전송(key=value, 쿼리 파라미터 형식)  
+- **HTML Form 전송은 GET,POST 만 지원**   
 ```http
-POST/save HTTP/1.1
+POST /save HTTP/1.1
 Host: localhost:8080
 Content-Type: application/x-www-form-urlencoded
 
@@ -42,10 +45,20 @@ Host: localhost:8080
 ```
 
 4. HTTP API를 통한 데이터 전송 
-
-
-
-
+- 서버 to 서버(백엔드 시스템 통신)  
+- 앱 클라이언트(아이폰,안드로이드)  
+- 웹 클라이언트(HTML Form 대신 자바스크립트 통한 통신에 사용)  
+- POST,PUT,PATCH : 메시지 바디를 통해 데이터 전송   
+- GET: 조회, 쿼리 파라미터로 데이터 전달  
+- Content-Type:application/json 주로 사용  
+```http
+POST /members HTTP/1.1
+Content-Type: application/json
+{
+"username": "young", "age": 20
+/members
+}
+```
 
 
 
