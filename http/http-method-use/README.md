@@ -59,7 +59,19 @@ Content-Type: application/json
 "age": 20
 }
 ```
+ㅇ라알
+
+
+## `HTTP API 설계 예시`
+HTTP API - 컬렉션  
+- POST 기반 등록  
+- 예) 회원 관리 API 제공  
+HTTP API - 스토어  
+- PUT 기반 등록  
+- 예) 정적 컨텐츠 관리, 원격 파일 관리  
+HTML FORM 사용  
+- 웹 페이지 회원 관리  
+- GET,POST 만 지원  
 
 
 
-## `HTTP API 설계 예시` 
