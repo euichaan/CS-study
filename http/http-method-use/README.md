@@ -61,14 +61,30 @@ Content-Type: application/json
 ```
 
 ## `HTTP API 설계 예시`
-HTTP API - 컬렉션  
+**HTTP API - 컬렉션**  
 - POST 기반 등록  
 - 예) 회원 관리 API 제공  
+- 회원 목록 /members ->GET  
+- 회원 등록 /members ->POST  
+- 회원 조회 /members/{id} ->GET  
+- 회원 수정 /members/{id} ->PATCH,PUT,POST  
+- 회원 삭제 /members/{id} ->DELETE  
+- `클라이언트는 등록될 리소스의 URI를 모른다`  
+- `서버가 새로 등록된 리소스 URI를 생성해준다`  
+```http
+HTTP/1.1 201 Created
+Location: /members/100
+```  
+- 컬렉션은 서버가 관리하는 리소스 디렉토리를 말한다.  
+- 서버가 리소스의 URI을 생성하고 관리  
+- 여기서 컬렉션은 /members  
 
-HTTP API - 스토어  
+
+**HTTP API - 스토어**  
 - PUT 기반 등록  
 - 예) 정적 컨텐츠 관리, 원격 파일 관리  
-HTML FORM 사용  
+
+**HTML FORM 사용**  
 - 웹 페이지 회원 관리  
 - GET,POST 만 지원  
 
