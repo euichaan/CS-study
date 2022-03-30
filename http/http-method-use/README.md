@@ -106,7 +106,7 @@ Location: /members/100
 - 회원 수정 /members/{id}/edit, /members/{id} -> POST  
 - 회원 삭제 /members/{id}/delete -> POST  
 
-**컨트롤 URI**  
+**컨트롤 URI,컨트롤러(controller)**  
 - 동사로 된 리소스 경로를 사용  
 - POST의 /new, /edit, /delete가 컨트롤 URI  
 - HTTP 메서드로 해결하기 애매한 경우 사용  
