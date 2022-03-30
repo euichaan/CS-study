@@ -75,7 +75,7 @@ Content-Type: application/json
 HTTP/1.1 201 Created
 Location: /members/100
 ```  
-- 컬렉션은 서버가 관리하는 리소스 디렉토리를 말한다.  
+- 컬렉션은 서버가 관리하는 리소스 디렉토리를 말한다  
 - 서버가 리소스의 URI을 생성하고 관리  
 - 여기서 컬렉션은 /members  
 
@@ -83,10 +83,39 @@ Location: /members/100
 **HTTP API - 스토어**  
 - PUT 기반 등록  
 - 예) 정적 컨텐츠 관리, 원격 파일 관리  
+- 파일 목록 /files ->GET  
+- 파일 조회 /files/{filename} ->GET  
+- 파일 등록 /files/{filename}->PUT
+- 파일 삭제 /files/{filename} ->DELETE
+- 파일 대량 등록 /files ->POST  
+- `클라이언트가 리소스 URI를 알고 있어야 한다`  
+- PUT /files/star.jpg  
+- 클라이언트가 직접 리소스의 URI를 지정한다  
+- 스토어는 클라이언트가 관리하는 리소스 저장소를 말한다  
+- 클라이언트가 리소스의 URI를 알고 관리  
+- 여기서 스토어는 /files  
 
 **HTML FORM 사용**  
 - 웹 페이지 회원 관리  
-- GET,POST 만 지원  
+- GET,POST 만 지원. 제약이 있다  
+- 회원 목록 /members -> GET    
+- 회원 등록 폼 /members/new -> GET    
+- 회원 등록 /members/new, /members -> POST    
+- 회원 조회 /members/{id} -> GET    
+- 회원 수정 폼 /members/{id}/edit -> GET  
+- 회원 수정 /members/{id}/edit, /members/{id} -> POST  
+- 회원 삭제 /members/{id}/delete -> POST  
+
+**컨트롤 URI**  
+- 동사로 된 리소스 경로를 사용  
+- POST의 /new, /edit, /delete가 컨트롤 URI  
+- HTTP 메서드로 해결하기 애매한 경우 사용  
+
+
+
+
+
+ 
 
 
 
