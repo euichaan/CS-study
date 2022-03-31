@@ -53,18 +53,21 @@ save 버튼의 결과로 아무 내용이 없어도 된다. save 버튼 눌러�
 ### `3xx`
 리다이렉션. 요청을 완료하기 위해 유저 에이전트의 추가 조치 필요  
 웹 브라우저는 3xx응답의 결과에 Location 헤더가 있으면, Location 위치로 자동 이동(리다이렉트)  
+![리다이렉션의 이해](https://github.com/euichanhwang/CS_study/blob/main/img/6.http-status-%EB%A6%AC%EB%8B%A4%EC%9D%B4%EB%A0%89%EC%85%98%EC%9D%98%20%EC%9D%B4%ED%95%B4.jpg)  
 
 영구 리다이렉션 : 특정 리소스의 URI가 영구적으로 이동, 원래의 URL 사용하지 않고 검색 엔진에서도 변경을 인지   
 - 예)/members ->/users  
 - 예)/event -> /new-event  
 - 301 Moved Permanently  
 - 308 Permanent redirect  
+
 **301 Moved Permanently**  
 리다이렉트시 요청 메서드가 GET으로 변하고, 본문이 제거될 수 있음(MAY)  
+![301](https://github.com/euichanhwang/CS_study/blob/main/img/6.http-status-301%20Moved%20Permanently.jpg)   
 
-**308 Permanent Redirect  
-301과 기능은 같음. 리다이렉트 시 요청 메서드와 본문 유지(처음 POST를 보내면 리다이렉트도 POST 유지) 
-![301](https://github.com/euichanhwang/CS_study/blob/main/img/6.http-status-301%20Moved%20Permanently.jpg) 
+**308 Permanent Redirect**  
+301과 기능은 같음. 리다이렉트 시 요청 메서드와 본문 유지(처음 POST를 보내면 리다이렉트도 POST 유지)  
+![308](https://github.com/euichanhwang/CS_study/blob/main/img/6.http-status.308%20Permanent%20Redirect.jpg)  
 
 일시 리다이렉션 : 일시적인 변경  
 - 주문 완료 후 주문 내역 화면으로 이동  
