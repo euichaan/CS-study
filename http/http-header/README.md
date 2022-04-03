@@ -49,7 +49,7 @@ Accept-Language: 클라이언트가 선호하는 자연 언어
 Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7//1.ko-KR;q=1(q생략) 2.ko;q=0.9 3.en-US;q=0.8 4.en:q=0.7  
 
 **구체적인 것이 우선한다.**  
-Accept: text/*, text/plain, text/plain;format=flowed, */*//1.text/plain;format=flowed 2.text/plain 3.text/* 4.*/*    
+Accept: text/*, text/plain, text/plain;format=flowed, */*//1.text/plain;format=flowed 2.text/plain 3.text/$*$ 4.$*$/$*$      
 
 
 
