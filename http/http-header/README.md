@@ -14,7 +14,8 @@ HTTP 전송에 필요한 모든 부가정보
 예) 메시지 바디의 내용, 메시지 바디의 크기, 압축, 인증, 요청 클라이언트, 서버 정보, 캐시 관리 정보...  
 필요시 임의의 헤더 추가 가능  
 
-## HTTP 표준(2014년 RFC7230~7235)
+## HTTP 표준(2014년 RFC7230~7235)  
+**RFC723x의 변화**  
 표현 = 표현 메타데이터+ 표현 데이터  
 엔티티 -> 표현(요청이나 응답에서 전달할 실제 데이터)  
 ![HTTP BODY](https://github.com/euichanhwang/CS_study/blob/main/img/7.http-header1-message%20body.jpg)  
