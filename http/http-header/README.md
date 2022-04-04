@@ -58,9 +58,47 @@ Accept-Language: ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7//1.ko-KR;q=1(q생략) 2.ko;
 
 ## 전송 방식 설명  
 - 단순 전송  
+```http
+HTTP/1.1 200 OK
+Content-Type: text/html;charset=UTF-8 
+Content-Length: 3423
+
+<html> 
+ <body>...</body>
+</html>
+```
 - 압축 전송  
+```http
+HTTP/1.1 200 OK
+Content-Type: text/html;charset=UTF-8 
+Content-Encoding: gzip
+Content-Length: 521
+
+lkj123kljoiasudlkjaweioluywlnfdo912u34ljko98udjkl
+```
 - 분할 전송  
+```http
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Transfer-Encoding: chunked
+
+5
+Hello
+5
+World
+0
+\r\n
+```
 - 범위 전송  
+```http
+HTTP/1.1 200 OK
+Content-Type: text/plain
+Content-Range: bytes 1001-2000 / 2000
+
+qweqwe1l2iu3019u2oehj1987askjh3q98y
+```
+## 일반 정보  
+
 
 
 
