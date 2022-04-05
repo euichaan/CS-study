@@ -212,4 +212,27 @@ example.org 에서 쿠키를 생성하고 domain 지정을 생략
 - dev.example.org는 쿠키 미접근  
 
 **쿠키-경로**  
+예)path=/home  
+**이 경로를 포함한 하위 경로 페이지만 쿠키 접근**  
+**일반적으로 path=/ 루트로 지정**  
+예를 들어 path=/home으로 지정하면,  
+- /home -> 가능  
+- /home/level1 -> 가능  
+- /home/level1/level2 -> 가능  
+- /hello -> 불가능  
+
+**쿠키-보안**  
+`Secure`  
+쿠키는 http,https를 구분하지 않고 전송  
+Secure를 적용하면 https인 경우에만 전송  
+
+`HttpOnly`  
+XSS 공격 방지  
+자바스크립트에서 접근 불가(document.cookie)  
+HTTP 전송에만 사용  
+
+`SameSite`
+XSRF 공격 방지  
+요청 도메인과 쿠키에 설정된 도메인이 같은 경우만 쿠키 전송  
+
 
