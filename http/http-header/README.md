@@ -182,7 +182,7 @@ Set-Cookie: 서버에서 클라이언트로 쿠키 전달(응답)
 ## 쿠키 정보  
 예)Set-Cookie: sessionId=abcde1234; expires=Sat, 26-Dec-2020 00:00:00 GMT; path=/; domain=.google.com; Secure  
 
-사용처
+**사용처**  
 - 사용자 로그인 세션 관리  
 - 광고 정보 트래킹  
 쿠키 정보는 항상 서버에 전송됨  
@@ -205,6 +205,7 @@ Set-Cookie: max-age:3600(3600초)
 명시: 명시한 문서 기준 도메인 + 서브 도메인 포함  
 - example.org는 물론이고  
 - dev.example.org 도 쿠키 접근  
+
 생략: 현재 문서 기준 도메인만 적용  
 example.org 에서 쿠키를 생성하고 domain 지정을 생략  
 - example.org 에서만 쿠키 접근  
