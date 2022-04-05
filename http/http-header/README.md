@@ -150,11 +150,35 @@ Retry-After: 유저 에이전트가 다음 요청을 하기까지 기다려야 �
 
 
 ## `쿠키`
-Set-cookie: 서버에서 클라이언트로 쿠키 전달(응답)  
+Set-Cookie: 서버에서 클라이언트로 쿠키 전달(응답)  
 Cookie: 클라이언트가 서버에서 받은 쿠키를 저장하고, HTTP 요청시 서버로 전달  
+
+## `쿠키 미사용 과정`  
 ![쿠키 미사용](https://github.com/euichanhwang/CS_study/blob/main/img/7.http-header1-%EC%BF%A0%ED%82%A4%20%EB%AF%B8%EC%82%AC%EC%9A%A9.jpg)  
 ![쿠키 미사용-로그인](https://github.com/euichanhwang/CS_study/blob/main/img/7.http-header1-%EC%BF%A0%ED%82%A4%20%EB%AF%B8%EC%82%AC%EC%9A%A9%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.jpg)  
-![쿠키 미사용-로그인 이후 welcome 페이지 접근](https://github.com/euichanhwang/CS_study/blob/main/img/7.http-header1-%EC%BF%A0%ED%82%A4%20%EB%AF%B8%EC%82%AC%EC%9A%A9%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%9D%B4%ED%9B%84.jpg)  
+![쿠키 미사용-로그인 이후 welcome 페이지 접근](https://github.com/euichanhwang/CS_study/blob/main/img/7.http-header1-%EC%BF%A0%ED%82%A4%20%EB%AF%B8%EC%82%AC%EC%9A%A9%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%9D%B4%ED%9B%84.jpg) 
 
+### Stateless
+HTTP는 무상태 프로토콜이다  
+클라이언트와 서버가 요청과 응답을 주고 받으면 연결 끊어짐  
+클라이언트가 다시 요청하면 서버는 이전 요청을 기억하지 못한다  
+클라이언트와 서버는 서로 상태를 유지하지 않는다  
+
+### 쿠키 미사용 대안
+모든 요청에 사용자 정보 포함  
+```http
+GET /welcome?user=홍길동 HTTP/1.1
+```
+모든 요청과 링크에 사용자 정보 포함? 불가능  
+브라우저를 완전히 종료하고 다시 열면?  
+
+## `쿠키를 사용한 로그인 과정`
+![쿠키 사용 로그인](https://github.com/euichanhwang/CS_study/blob/main/img/7.http-header1.pdf-56.jpg)  
+Set-Cookie: 서버에서 클라이언트로 쿠키 전달(응답)  
+웹 브라우저는 쿠키 저장소에 저장  
+![쿠키-로그인 이후 welcome 페이지 접근](https://github.com/euichanhwang/CS_study/blob/main/img/7.http-header1.pdf-57.jpg)
+![쿠키-모든 요청에 쿠키 정보 자동 포함](https://github.com/euichanhwang/CS_study/blob/main/img/7.http-header1.pdf-58.jpg)
+
+## 쿠키 정보  
 
 
