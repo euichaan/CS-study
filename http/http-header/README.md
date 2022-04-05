@@ -152,10 +152,9 @@ Retry-After: 유저 에이전트가 다음 요청을 하기까지 기다려야 �
 ## `쿠키`
 Set-cookie: 서버에서 클라이언트로 쿠키 전달(응답)  
 Cookie: 클라이언트가 서버에서 받은 쿠키를 저장하고, HTTP 요청시 서버로 전달  
-
-
-
-
+![쿠키 미사용](https://github.com/euichanhwang/CS_study/blob/main/img/7.http-header1-%EC%BF%A0%ED%82%A4%20%EB%AF%B8%EC%82%AC%EC%9A%A9.jpg)  
+![쿠키 미사용-로그인](https://github.com/euichanhwang/CS_study/blob/main/img/7.http-header1-%EC%BF%A0%ED%82%A4%20%EB%AF%B8%EC%82%AC%EC%9A%A9%20%EB%A1%9C%EA%B7%B8%EC%9D%B8.jpg)  
+![쿠키 미사용-로그인 이후 welcome 페이지 접근](https://github.com/euichanhwang/CS_study/blob/main/img/7.http-header1-%EC%BF%A0%ED%82%A4%20%EB%AF%B8%EC%82%AC%EC%9A%A9%20%EB%A1%9C%EA%B7%B8%EC%9D%B8%20%EC%9D%B4%ED%9B%84.jpg)  
 
 
 
