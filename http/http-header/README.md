@@ -192,7 +192,7 @@ Set-Cookie: 서버에서 클라이언트로 쿠키 전달(응답)
 주의
 - 보안에 민감한 데이터는 저장하면 안됨(주민번호,신용카드 번호 등등)  
 
-**쿠키-생명주기(Expires,max-age)**
+**쿠키-생명주기(Expires,max-age)**  
 예)Set-Cookie: expires=Sat, 26-Dec-2020 00:00:00 GMT  
 - 만료일이 되면 쿠키 삭제  
 Set-Cookie: max-age:3600(3600초)  
@@ -231,7 +231,7 @@ XSS 공격 방지
 자바스크립트에서 접근 불가(document.cookie)  
 HTTP 전송에만 사용  
 
-`SameSite`
+`SameSite`  
 XSRF 공격 방지  
 요청 도메인과 쿠키에 설정된 도메인이 같은 경우만 쿠키 전송  
 
