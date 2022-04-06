@@ -62,7 +62,7 @@ Last-Modified: 2020년 11월 10일 10:00:00
 ![캐시와 조건부 검증](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-27.jpg)
 ![캐시와 조건부 검증](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-28.jpg)
 
-## `검증 헤더와 조건부 요청 정리 : 검증 헤더(Last-Modified), 조건부 요청(if-modified-since)`
+### `검증 헤더와 조건부 요청 정리 : 검증 헤더(Last-Modified), 조건부 요청(if-modified-since)`
 - 캐시 유효 시간이 초과해도, 서버의 데이터가 갱신되지 않으면 304 Not Modified + 헤더 메타 정보만 응답(바디X)  
 - 클라이언트는 서버가 보낸 응답 헤더 정보로 캐시의 메타 정보를 갱신  
 - 클라이언트는 캐시에 저장되어 있는 데이터 재활용  
