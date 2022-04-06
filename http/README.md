@@ -9,4 +9,4 @@
 - [http-method-use](https://github.com/euichanhwang/CS_study/tree/main/http/http-method-use)  
 - [http-status](https://github.com/euichanhwang/CS_study/tree/main/http/http-status)   
 - [http-header](https://github.com/euichanhwang/CS_study/tree/main/http/http-header)  
-- [http-header](https://github.com/euichanhwang/CS_study/tree/main/http/http-header2)  
+- [http-header2](https://github.com/euichanhwang/CS_study/tree/main/http/http-header2)  
