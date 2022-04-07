@@ -67,4 +67,51 @@ Last-Modified: 2020년 11월 10일 10:00:00
 - 클라이언트는 서버가 보낸 응답 헤더 정보로 캐시의 메타 정보를 갱신  
 - 클라이언트는 캐시에 저장되어 있는 데이터 재활용  
 - 결과적으로 네트워크 다운로드가 발생하지만 용량이 적은 헤더 정보만 다운로드  
-- 매우 실용적인 해결책 
+- 매우 실용적인 해결책   
+
+## 검증 헤더와 조건부 요청 2  
+**검증 헤더**  
+- 캐시 데이터와 서버 데이터가 같은지 검증하는 데이터  
+- Last-Modified, ETag  
+
+**조건부 요청 헤더**  
+- 검증 헤더로 조건에 따른 분기  
+- If-Modified-Since: Last-Modified 사용  
+- If-None-Match: ETag 사용  
+- 조건이 만족하면 200 OK  
+- 조건이 만족하지 않으면 304 Not Modified  
+
+**If-Modified-Since: 이후에 데이터가 수정되었으면?**    
+데이터 미변경 예시  
+- 캐시: 2020년 11월 10일 10:00:00 vs 서버: 2020년 11월 10일 10:00:00  
+- 304 Not Modified, 헤더 데이터만 전송(BODY 미포함)  
+- 전송 용량 0.1M(헤더 0.1M)
+
+데이터 변경 예시  
+- 캐시: 2020년 11월 10일 10:00:00 vs 서버: 2020년 11월 10일 11:00:00  
+- 200 OK, 모든 데이터 전송(BODY 포함)  
+- 전송 용량 1.1M(헤더 0.1M,바디 1.0M)  
+
+**Last-Modified, If-Modified-Since 단점**  
+- 1초 미만(0.x초) 단위로 캐시 조정이 불가능  
+- 날짜 기반의 로직 사용  
+- 데이터를 수정해서 날짜가 다르지만, 같은 데이터를 수정해서 데이터 결과가 똑같은 경우  
+- 서버에서 별도의 캐시 로직을 관리하고 싶은 경우 예)스페이스나 주석처럼 크게 영향이 없는 변경에서 캐시를 유지하고 싶은 경우  
+
+## ETag,If-None-Match  
+ETag(Entity Tag)  
+- 캐시용 데이터에 임의의 고유한 버전 이름을 달아둠 예)ETag: "v1.0", ETag: "a2jjodwjekl3"  
+- 데이터가 변경되면 이 이름을 바꾸어서 변경함(Hash를 다시 생성)  
+- 진짜 단순하게 ETag만 보내서 같으면 유지, 다르면 다시 받기  
+
+## Using ETag  
+![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-35.jpg)
+![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-36.jpg)
+![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-37.jpg)
+![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-38.jpg)
+![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-39.jpg)
+![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-40.jpg)
+![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-41.jpg)
+![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-42.jpg)
+![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-43.jpg)
+
