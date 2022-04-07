@@ -115,3 +115,4 @@ ETag(Entity Tag)
 ![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-42.jpg)
 ![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-43.jpg)
 
+- 웹 브라우저에서 보낸 ETag와 서버에서 보낸 ETag 가 같다 -> data가 아직 수정되지 않았다.
