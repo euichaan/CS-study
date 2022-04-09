@@ -103,6 +103,9 @@ ETag(Entity Tag)
 - 캐시용 데이터에 임의의 고유한 버전 이름을 달아둠 예)ETag: "v1.0", ETag: "a2jjodwjekl3"  
 - 데이터가 변경되면 이 이름을 바꾸어서 변경함(Hash를 다시 생성)  
 - 진짜 단순하게 ETag만 보내서 같으면 유지, 다르면 다시 받기  
+- 캐시 제어 로직을 서버에서 완전히 관리  
+- 클라이언트는 단순히 이 값을 서버에 제공(클라이언트는 캐시 메커니즘을 모름)  
+- 예)서버는 배타 오픈 기간인 3일 동안 파일이 변경되어도 ETag 동일하게 유지, 배포 주기에 맞추어 ETag 모두 갱신  
 
 ## Using ETag  
 ![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-35.jpg)
@@ -115,4 +118,24 @@ ETag(Entity Tag)
 ![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-42.jpg)
 ![ETag 사용한 전송](https://github.com/euichanhwang/CS_study/blob/main/img/8.http-header2.pdf-43.jpg)
 
-- 웹 브라우저에서 보낸 ETag와 서버에서 보낸 ETag 가 같다 -> data가 아직 수정되지 않았다.
+- 웹 브라우저에서 보낸 ETag와 서버에서 보낸 ETag 가 같다 -> data가 아직 수정되지 않았다.  
+
+## 캐시 제어 헤더
+### Cache-Control: 캐시 제어
+- Cache-Control: max-age(캐시 유효 시간, 초 단위)  
+- Cache-Control: no-cache(데이터는 캐시해도 되지만, 항상 원(origin)서버에 검증하고 사용)  
+- Cache-Control: no-store(데이터에 민감한 정보가 있으므로 저장하면 안됨.메모리에서 사용하고 최대한 빨리 삭제)  
+
+### Pragma: 캐시 제어(하위 호환)
+- Pragma: no-cache  
+- HTTP 1.0 하위 호환  
+
+### Expires: 캐시 유효 기간(하위 호환).캐시 만료일 지정
+- 예)expires: Mon,01 Jan 1990 00:00:00 GMT  
+- 캐시 만료일을 정확한 날짜로 지정  
+- HTTP 1.0 부터 사용  
+- Cache-Control: max-age 권장  
+- Cache-Control: max-age와 함께 사용하면 Expires는 무시  
+
+## 프록시 캐시  
+
