@@ -24,8 +24,8 @@ https://www.google.com:443/search?q=hello&hl=ko
 - 쿼리 파라미터(q=hello&hl=ko)  
 
 ### scheme 
-- **scheme:**//[userinfo@]host[:port][/path][?query][#fragment]//문법  
-- **https:**//www.google.com:443/search?q=hello&hl=ko 
+- `scheme:`//[userinfo@]host[:port][/path][?query][#fragment]//문법  
+- `https:`//www.google.com:443/search?q=hello&hl=ko 
 - 주로 프로토콜 사용  
 - **프로토콜: 어떤 방식으로 자원에 접근할 것인가 하는 약속 규칙.** https,http,ftp 등등  
 - http는 80 포트, https는 443 포트를 주로 사용, 포트는 생략 가능  
