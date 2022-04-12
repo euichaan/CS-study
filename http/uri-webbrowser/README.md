@@ -17,6 +17,26 @@ URN: urn:example:animal:ferret:nose
 ## `URL 분석`
 scheme://[userinfo@]host[:port][/path][?query][#fragment]//문법  
 https://www.google.com:443/search?q=hello&hl=ko  
+- 프로토콜(https)  
+- 호스트명(www.google.com)  
+- 포트 번호(443)  
+- 패스(/search)  
+- 쿼리 파라미터(q=hello&hl=ko)  
+
+### scheme 
+- **scheme:**//[userinfo@]host[:port][/path][?query][#fragment]//문법  
+- **https:**//www.google.com:443/search?q=hello&hl=ko 
+- 주로 프로토콜 사용  
+- **프로토콜: 어떤 방식으로 자원에 접근할 것인가 하는 약속 규칙.** https,http,ftp 등등  
+- http는 80 포트, https는 443 포트를 주로 사용, 포트는 생략 가능  
+- https는 http에 보안 추가(HTTP Secure)  
+
+### userinfo
+- URL에 사용자정보를 포함해서 인증  
+- 거의 사용하지 않음  
+
+
+
 
 
 
