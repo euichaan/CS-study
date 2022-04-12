@@ -83,7 +83,15 @@ TELNET-23
 HTTP-80  
 HTTPS-443  
 
-## DNS  
+## DNS(Domain Name System)
+IP는 기억하기 어렵고, 변경될 수 있다.  
+- 전화번호부
+- 도메인 명을 IP 주소로 변환 
+![DNS](https://github.com/euichanhwang/CS_study/blob/main/img/1.internet-network.pdf-42.jpg)  
+1. 도메인 명을 입력 예)google.com  
+2. 응답: 200.200.200.2(DNS 서버에서 응답)  
+3. 접속: 200.200.200.2  
+
 
 
 
