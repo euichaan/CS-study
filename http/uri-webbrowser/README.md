@@ -16,7 +16,7 @@ URN: urn:example:animal:ferret:nose
 
 ## `URL 분석`
 scheme://[userinfo@]host[:port][/path][?query][#fragment]   
-https://www.google.com:443/search?q=hello&hl=ko  
+https://<hi1>www.google<hi2>.com:443/search<hi3>?q=hello&hl=ko   
 - 프로토콜(https)  
 - 호스트명(www.google.com)  
 - 포트 번호(443)  
