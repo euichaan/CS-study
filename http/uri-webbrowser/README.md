@@ -55,14 +55,14 @@ scheme://[userinfo@]host[:port]`[/path]`[?query][#fragment]
 - 예)home/file1.jpg , /members , /members/100, /items/iphone12  
 
 ### query
-scheme://[userinfo@]host`[:port]`[/path]`[?query]`[#fragment]  
+scheme://[userinfo@]host[:port][/path]`[?query]`[#fragment]  
 <hi1>https://<hi2>www<hi3>.<hi4>google.com<hi5>: 443/search?`q=hello&hl=ko`  
 - key=value 형태  
 - **?로 시작, &로 추가 가능. ?keyA=valueA&keyB=valueB  
 - query parameter, query string 등으로 불림. 웹서버에 제공하는 파라미터, 문자 형태  
 
 ### fragment
-scheme://[userinfo@]host`[:port]`[/path][?query]`[#fragment]`  
+scheme://[userinfo@]host[:port][/path][?query]`[#fragment]`  
 <hi1>https<hi2>://<hi3>docs.<hi4>spring.<hi5>io/spring-boot/docs/current/reference/html/getting-
 started.html`#getting-started-introducing-spring-boot`
 - fragment  
