@@ -43,7 +43,7 @@ https://`www.google.com`:443/search?q=hello&hl=ko
 
 ### PORT  
 scheme://[userinfo@]host`[:port]`[/path][?query][#fragment]  
-<hi1>https://<hi2>www.google.com: `443`/search?q=hello&hl=ko  
+<hi1>https://<hi2>www<hi3>.<hi4>google.com<hi5>: `443`/search?q=hello&hl=ko  
 - 포트(PORT)  
 - 접속 포트  
 - 일반적으로 생략, 생략 시 http는 80, https는 443  
