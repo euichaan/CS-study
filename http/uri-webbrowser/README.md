@@ -25,7 +25,7 @@ https://<hi1>www<hi5>.<hi4>google<hi2>.com:443/search<hi3>?q=hello&hl=ko
 
 ### scheme 
 - `scheme:`//[userinfo@]host[:port][/path][?query][#fragment]  
-- `https:`//www.google.com:443/search?q=hello&hl=ko 
+- `https:`//<hi1>www<hi5>.<hi4>google<hi2>.com:443/search<hi3>?q=hello&hl=ko 
 - 주로 프로토콜 사용  
 - **프로토콜: 어떤 방식으로 자원에 접근할 것인가 하는 약속 규칙.** https,http,ftp 등등  
 - http는 80 포트, https는 443 포트를 주로 사용, 포트는 생략 가능  
@@ -43,7 +43,7 @@ https://`www.google.com`:443/search?q=hello&hl=ko
 
 ### PORT  
 scheme://[userinfo@]host`[:port]`[/path][?query][#fragment]  
-https://www.google.com: `443`/search?q=hello&hl=ko  
+<hi1>https://<hi2>www.google.com: `443`/search?q=hello&hl=ko  
 - 포트(PORT)  
 - 접속 포트  
 - 일반적으로 생략, 생략 시 http는 80, https는 443  
