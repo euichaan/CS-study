@@ -48,7 +48,26 @@ scheme://[userinfo@]host`[:port]`[/path][?query][#fragment]
 - 접속 포트  
 - 일반적으로 생략, 생략 시 http는 80, https는 443  
 
+### path
+scheme://[userinfo@]host[:port]`[/path]`[?query][#fragment]  
+<hi1>https://<hi2>www<hi3>.<hi4>google.com<hi5>: 443/`search`?q=hello&hl=ko 
+- 리소스 경로, 계층적 구조  
+- 예)home/file1.jpg , /members , /members/100, /items/iphone12  
 
+### query
+scheme://[userinfo@]host`[:port]`[/path]`[?query]`[#fragment]  
+<hi1>https://<hi2>www<hi3>.<hi4>google.com<hi5>: 443/search?`q=hello&hl=ko`  
+- key=value 형태  
+- **?로 시작, &로 추가 가능. ?keyA=valueA&keyB=valueB  
+- query parameter, query string 등으로 불림. 웹서버에 제공하는 파라미터, 문자 형태  
+
+### fragment
+scheme://[userinfo@]host`[:port]`[/path][?query]`[#fragment]`  
+<hi1>https<hi2>://<hi3>docs.<hi4>spring.<hi5>io/spring-boot/docs/current/reference/html/getting-
+started.html`#getting-started-introducing-spring-boot`
+- fragment  
+- html 내부 북마크 등에 사용  
+- 서버에 전송하는 정보 아님  
 
 
 
