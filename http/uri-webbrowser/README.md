@@ -69,6 +69,41 @@ started.html`#getting-started-introducing-spring-boot`
 - html 내부 북마크 등에 사용  
 - 서버에 전송하는 정보 아님  
 
+## `웹 브라우저 요청 흐름`  
+https://<hi1>www<hi5>.<hi4>google<hi2>.com:443/search<hi3>?q=hello&hl=ko  
+1. <hi1>www.<hi2>google.<hi3>com 을 보고 DNS 조회. HTTP PORT는 생략하는 경우 많음  
+2. 웹 브라우저에서 HTTP 요청 메시지 생성  
+```http
+ GET /search?q=hello&hl=ko HTTP/1.1 
+ Host: www.google.com
+```
+URL의 path부터 query 정보가 들어간다.  
+3. HTTP 메시지 전송  
+![HTTP 메시지 전송 과정](https://github.com/euichanhwang/CS_study/blob/main/img/2.uri-webbrowser.pdf-22.jpg)  
+패킷을 전송할 때 , 패킷 정보는  
+출발지 IP, PORT  
+목적지 IP, PORT  
+**전송 데이터** -> 전송 데이터에 위의 HTTP 메시지가 들어간다.  
+![패킷 정보](https://github.com/euichanhwang/CS_study/blob/main/img/2.uri-webbrowser.pdf-24.jpg)  
+4. 웹 브라우저에서 구글 서버로 요청 패킷 전달  
+5. 요청 패킷 도착. 구글 서버는 TCP/IP 패킷을 까서 버리고 HTTP 메시지 꺼낸 후 분석한다.  
+6. HTTP 응답 메시지 만든다  
+```http
+HTTP/1.1 200 OK
+Content-Type: text/html;charset=UTF-8
+Content-Length: 3423
+
+<html> 
+ <body>...</body>
+</html>
+```
+7. 구글 서버에서 웹 브라우저로 응답 패킷을 전달  
+8. 웹 브라우저로 응답 패킷 도착  
+9. 웹 브라우저에서 HTML을 렌더링해서 화면에 보여준다.  
+
+
+
+
 
 
 
