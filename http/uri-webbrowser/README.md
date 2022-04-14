@@ -58,7 +58,7 @@ scheme://[userinfo@]host[:port]`[/path]`[?query][#fragment]
 scheme://[userinfo@]host[:port][/path]`[?query]`[#fragment]  
 <hi1>https://<hi2>www<hi3>.<hi4>google.com<hi5>: 443/search?`q=hello&hl=ko`  
 - key=value 형태  
-- **?로 시작, &로 추가 가능. ?keyA=valueA&keyB=valueB  
+- **?로 시작, &로 추가 가능. ?keyA=valueA&keyB=valueB**    
 - query parameter, query string 등으로 불림. 웹서버에 제공하는 파라미터, 문자 형태  
 
 ### fragment
@@ -74,9 +74,9 @@ https://<hi1>www<hi5>.<hi4>google<hi2>.com:443/search<hi3>?q=hello&hl=ko
 1. <hi1>www.<hi2>google.<hi3>com 을 보고 DNS 조회. HTTP PORT는 생략하는 경우 많음  
 2. 웹 브라우저에서 HTTP 요청 메시지 생성  
 ```http
- GET /search?q=hello&hl=ko HTTP/1.1 
- Host: www.google.com
-```
+GET /search?q=hello&hl=ko HTTP/1.1 
+Host: www.google.com //헤더 부분 
+```  
 URL의 path부터 query 정보가 들어간다.  
 3. HTTP 메시지 전송  
 ![HTTP 메시지 전송 과정](https://github.com/euichanhwang/CS_study/blob/main/img/2.uri-webbrowser.pdf-22.jpg)  
