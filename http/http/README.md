@@ -18,19 +18,19 @@ UDP: HTTP/3
 - 클라이언트는 서버에 요청을 보내고, 응답을 대기  
 - 서버가 요청에 대한 결과를 만들어서 응답  
 
-### 무상태 프로토콜(Stateless)  
+### `무상태 프로토콜(Stateless)`    
 - 서버가 클라이언트의 상태를 보존 X  
 - 장점: 서버 확장성 높음(스케일 아웃: 장비를 추가해서 확장하는 방식)  
 - 단점: 클라이언트가 추가 데이터 전송  
 
-### Stateful, Stateless의 차이점(예시)
+#### Stateful, Stateless의 차이점(예시)
 ![차이](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-9.jpg)  
 ![차이](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-10.jpg)  
 ![차이](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-11.jpg)  
 ![차이](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-12.jpg)  
 ![차이](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-13.jpg)  
 
-### Stateful, Stateless의 차이점 정리
+#### Stateful, Stateless의 차이점 정리
 - Stateful(상태 유지): 중간에 다른 점원으로 바뀌면 안된다.(중간에 다른 점원으로 바뀔 때 상태 정보를 다른 점원에게 미리 알려줘야 한다)  
 - Stateless(무상태): 중간에 다른 점원으로 바뀌어도 된다. 갑자기 클라이언트 요청이 증가해도, 서버를 대거 투입할 수 있다.    
 - 무상테는 응답 서버를 쉽게 바꿀 수 있다 -> **무한한 서버 증설 가능**  
@@ -41,5 +41,47 @@ UDP: HTTP/3
 ![차이](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-18.jpg)
 ![차이](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-19.jpg)
 
+#### Stateless의 실무 한계
+모든 것을 무상태로 설계 할 수 있는 경우도 있고 없는 경우도 있다.  
+- 무상태: 예)로그인이 필요 없는 단순한 서비스 소개 화면
+- 상태 유지: 예)로그인  
+로그인한 사용자의 경우 로그인 했다는 상태를 서버에 유지  
+일반적으로 브라우저 쿠키와 서버 세션등을 사용해서 상태 유지  
+상태 유지는 최소한만 사용  
+
+## 비연결성
+### 연결을 유지하는 모델
+0. 서버와 TCP/IP 연결  
+1. 클라이언트 1 요청  
+2. 서버 응답  
+**이 과정에서 서버는 연결을 계속 유지, 서버 자원을 소모**  
+
+### 연결을 유지하지 않는 모델 
+0. 서버와 TCP/IP 연결  
+1. 클라이언트 1 요청  
+2. 서버 응답  
+3. TCP/IP 연결 종료  
+**서버는 연결 유지 X, 최소한의 자원 유지**  
+
+**HTTP 는 기본이 연결을 유지하지 않는 모델**  
+일반적으로 초 단위 이하의 빠른 속도로 응답  
+서버 자원을 매우 효율적으로 사용할 수 있음  
+1시간 동안 수천명이 서비스를 사용해도 실제 서버에서 동시에 처리하는 요청은 수십개 이하로 매우 작음  
+예) 웹 브라우저에서 계속 연속해서 검색 버튼을 누르지는 않는다.  
+
+### 비 연결성 한계와 극복
+**TCP/IP 연결을 새로 맺어야 함 - 3 way handshake 시간 추가**  
+웹 브라우저로 사이트를 요청하면 HTML, 자바스크립트, css, 추가 이미지 등 수 많은 자원이 함께 다운로드  
+**HTTP 지속 연결로 문제 해결**  
+HTTP/2, HTTP/3에서 더 많은 최적화  
+
+![HTTP 초기](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-33.jpg)
+![HTTP 지속 연결](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-34.jpg)
+
+스테이스리스를 기억하자 - 서버 개발자들이 어려워하는 업무
+- 정말 같은 시간에 딱 맞추어 발생하는 대용량 트래픽  
+- 예) 학과 수업 등록, 선착순 할인 이벤트 -> 수천명 동시 요청  
+
+## `HTTP 메시지`
 
 
