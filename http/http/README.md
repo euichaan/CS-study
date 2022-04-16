@@ -89,9 +89,24 @@ UDP: HTTP/3
 ![HTTP 메시지 구조](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-39.jpg)  
 
 ### HTTP 응답 메시지
-HTTP-message   =  start-line  
-<hi1><hi2>        *( header-field CRLF)  
-                  CRLF  
-                  [ message-body ]  
+```http
+GET /search?q=hello?hl=ko HTTP/1.1
+Host:www.google.com
+```
+- start-line = **request-line** / status-line
+- request-line = method SP(공백) request-target SP HTTP-version CRLF(엔터)  
+- method SP = HTTP 메서드(GET: 조회)  
+- request-target = 요청 대상(/search?q=hello&hl=ko)  
+- HTTP-version  
+
+#### 상세 설명
+- method(HTTP 메서드)  
+- 종류: GET,POST,PUT,DELETE...
+- 서버가 수행해야 할 동작 지정  
+- GET: 리소스 조회  
+- POST: 요청 내역 처리
+
+
+
 
 
