@@ -94,17 +94,24 @@ GET /search?q=hello?hl=ko HTTP/1.1
 Host:www.google.com
 ```
 - start-line = **request-line** / status-line
-- request-line = method SP(공백) request-target SP HTTP-version CRLF(엔터)  
+- `request-line = method SP(공백) request-target SP HTTP-version CRLF(엔터)`  
 - method SP = HTTP 메서드(GET: 조회)  
 - request-target = 요청 대상(/search?q=hello&hl=ko)  
 - HTTP-version  
 
 #### 상세 설명
-- method(HTTP 메서드)  
+- `method(HTTP 메서드)`  
 - 종류: GET,POST,PUT,DELETE...
 - 서버가 수행해야 할 동작 지정  
 - GET: 리소스 조회  
-- POST: 요청 내역 처리
+- POST: 요청 내역 처리  
+
+- `request-target`  
+- `/search?q=hello&hl=ko`  
+- absolute-path<hi1>[<hi2>?query]<hi3>(절대경로[?쿼리])
+
+  
+
 
 
 
