@@ -88,7 +88,7 @@ UDP: HTTP/3
 ### HTTP 메시지 구조 
 ![HTTP 메시지 구조](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-39.jpg)  
 
-### HTTP 응답 메시지
+### HTTP 요청 메시지
 ```http
 GET /search?q=hello?hl=ko HTTP/1.1
 Host:www.google.com
@@ -99,16 +99,50 @@ Host:www.google.com
 - request-target = 요청 대상(/search?q=hello&hl=ko)  
 - HTTP-version  
 
-#### 상세 설명
+#### 상세 설명 - method
 - `method(HTTP 메서드)`  
 - 종류: GET,POST,PUT,DELETE...
 - 서버가 수행해야 할 동작 지정  
 - GET: 리소스 조회  
-- POST: 요청 내역 처리  
+- POST: 요청 내역 처리
 
+#### 상세 설명 - request-target
 - `request-target`  
 - `/search?q=hello&hl=ko`  
-- absolute-path<hi1>[<hi2>?query]<hi3>(절대경로[?쿼리])
+- absolute-path<hi1>[<hi2>?query]<hi3>(절대경로[?쿼리])  
+- 절대경로 = "/" 로 시작하는 경로  
+- 참고로 <hi1>http<hi2>://<hi3>...?x=y 와 같이 다른 유형의 경로지정 방법도 있다.  
+
+#### 상세 설명 - HTTP-version
+- HTTP version 명시
+
+### HTTP 응답 메시지 
+```http
+HTTP/1.1 200 OK
+Content-Type: text/html;charset=UTF-8
+Content-Lentgh: 3423
+
+<html>
+ <body>...</body>
+</html> 
+```
+- start-line = request-line / **status-line**
+- `status-line = HTTP-version SP status-code SP reason-phrase CRLF`  
+- HTTP 버전  
+- status-code = HTTP 상태 코드 : 요청 성공, 실패를 나타냄(200:성공, 400:클라이언트 요청 오류 500:서버 내부 오류)  
+- 이유 문구: 사람이 이해할 수 있는 짧은 상태 코드 설명 글  
+
+### HTTP 헤더  
+![HTTP 헤더](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-46.jpg)  
+- HTTP 전송에 필요한 모든 부가정보  
+- 예)메시지 바디의 내용, 메시지 바디의 크기, 압축, 인증, 요청 클라이언트(브라우저) 정보,서버 애플리케이션 정보, 캐시 관리 정보...     
+- 필요시 임의의 헤더 추가 가능  
+
+### HTTP 메시지 바디  
+- 실제 전송할 데이터  
+- HTML문서, 이미지, 영상, JSON 등등 byte로 표현할 수 있는 모든 데이터 전송 가능  
+
+
 
   
 
