@@ -118,7 +118,7 @@ Host: www.google.com
 
 ### HTTP 응답 메시지 
 ```http
-HTTP/1.1 200 OK
+HTTP/1.1 200 OK 
 Content-Type: text/html;charset=UTF-8
 Content-Lentgh: 3423
 
