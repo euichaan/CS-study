@@ -90,8 +90,8 @@ UDP: HTTP/3
 
 ### HTTP 요청 메시지
 ```http
-GET /search?q=hello?hl=ko HTTP/1.1
-Host:www.google.com
+GET /search?q=hello&hl=ko HTTP/1.1
+Host: www.google.com
 ```
 - start-line = **request-line** / status-line
 - `request-line = method SP(공백) request-target SP HTTP-version CRLF(엔터)`  
