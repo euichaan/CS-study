@@ -128,9 +128,9 @@ Content-Lentgh: 3423
 ```
 - start-line = request-line / **status-line**
 - `status-line = HTTP-version SP status-code SP reason-phrase CRLF`  
-- HTTP 버전  
+- HTTP-version = HTTP 버전  
 - status-code = HTTP 상태 코드 : 요청 성공, 실패를 나타냄(200:성공, 400:클라이언트 요청 오류 500:서버 내부 오류)  
-- 이유 문구: 사람이 이해할 수 있는 짧은 상태 코드 설명 글  
+- reason-phrase(이유 문구) = 사람이 이해할 수 있는 짧은 상태 코드 설명 글  
 
 ### HTTP 헤더  
 ![HTTP 헤더](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-46.jpg)  
