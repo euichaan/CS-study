@@ -85,5 +85,13 @@ UDP: HTTP/3
 - 예) 학과 수업 등록, 선착순 할인 이벤트 -> 수천명 동시 요청  
 
 ## `HTTP 메시지`
+### HTTP 메시지 구조 
+![HTTP 메시지 구조](https://github.com/euichanhwang/CS_study/blob/main/img/3.http.pdf-39.jpg)  
 
+### HTTP 응답 메시지
+HTTP-message   =  start-line  
+                  *( header-field CRLF)  
+                  CRLF  
+                  [ message-body ]  
+                  
 
