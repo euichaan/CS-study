@@ -90,8 +90,8 @@ UDP: HTTP/3
 
 ### HTTP 응답 메시지
 HTTP-message   =  start-line  
-                  *( header-field CRLF)  
+<hi1><hi2>        *( header-field CRLF)  
                   CRLF  
                   [ message-body ]  
-                  
+
 
